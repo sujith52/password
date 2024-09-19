@@ -12,9 +12,12 @@ password_input = st.text_input("Enter Password", type="password")
 if st.button("Login"):
     if password_input == PASSWORD:
         # Display the main interface
-        st.success("Logged in successfully!")
-        st.write("Welcome to the main interface!")
-        st.image(myurl, caption="G. Sujith Kumar", width=300)
+       
+        col1, col2, col3 = st.columns([1, 3, 1])
+        with col2:  # Center column
+            # Display the image with fit width
+             st.success("Logged in successfully!")
+            st.image(myurl, caption="G. Sujith Kumar", use_column_width=True)
         
         # Add your main interface components here
         st.write("Welcome to the Dark World all my Fellow People")
